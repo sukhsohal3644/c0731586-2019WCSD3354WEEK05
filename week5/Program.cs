@@ -51,7 +51,7 @@ namespace week5
         public dog()
         {
         }
-        public string dog_name ;
+        public string dog_name;
         public string dog_breed;
         public dog next_dog;
         public dog prev_dog;
@@ -60,13 +60,13 @@ namespace week5
     }
     class birthday_party
     {
-        
-      
+
+
         public dog peanut;
         public dog fifi;
         public dog clarence;
         public dog roy;
-       
+
         public dog head;
         public dog tail;
         public dog temporary;
@@ -105,3 +105,4 @@ namespace week5
         }
 
     }
+}
