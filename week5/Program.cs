@@ -24,6 +24,7 @@ namespace week5
             for (; MyMethod();)
             {
                 if (myFavouiteVariable > 10)
+
                 {
                     break;
                 }
@@ -41,7 +42,7 @@ namespace week5
 
     class dog
     {
-        private dog(string name, string breed)
+        public dog(string name, string breed)
         {
             dog_name = name;
             dog_breed = breed;
