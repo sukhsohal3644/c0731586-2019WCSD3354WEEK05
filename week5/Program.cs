@@ -11,7 +11,13 @@ namespace week5
         static void Main(string[] args)
         {
             var a = new TestQuestion2();
-            a.PlayingWithForLoops();
+            //a.PlayingWithForLoops();
+            //Console.ReadLine();
+
+            var b = new birthday_party();
+            b.setupPartyList();
+            Console.WriteLine(b.printPartyList());
+            Console.WriteLine(b.printPartyList_reverse());
             Console.ReadLine();
         }
     }
@@ -66,6 +72,8 @@ namespace week5
         public dog peanut;
         public dog fifi;
         public dog clarence;
+        public dog Giselle;
+        public dog Lulu;
         public dog roy;
 
         public dog head;
@@ -77,7 +85,10 @@ namespace week5
             peanut = new dog("Peanut", "Bichon");
             fifi = new dog("fifi", "Poodle ");
             clarence = new dog("Clarence", "German Sheppard");
+            Giselle = new dog("Giselle", "Border Collie");
+            Lulu = new dog("Lulu", "Shitzu");
             roy = new dog("Roy", "Beagle");
+            
 
 
             peanut.prev_dog = null;
@@ -85,8 +96,12 @@ namespace week5
             fifi.prev_dog = peanut;
             fifi.next_dog = clarence;
             clarence.prev_dog = fifi;
-            clarence.next_dog = roy;
-            roy.prev_dog = clarence;
+            clarence.next_dog = Giselle;
+            Giselle.prev_dog = clarence;
+            Giselle.next_dog = Lulu;
+            Lulu.prev_dog = Giselle;
+            Lulu.next_dog = roy;
+            roy.prev_dog = Lulu;
             roy.next_dog = null;
             head = peanut;
             tail = roy;
@@ -98,12 +113,32 @@ namespace week5
             temporary = head;
             while (temporary.next_dog != null)
             {
-                inviteList += temporary.dog_name + " * --- * ";
-            }
 
+                
+                inviteList += temporary.dog_name + " * --- * ";
+                temporary = temporary.next_dog;
+            }
+            inviteList += temporary.dog_name + " *__-";
             return inviteList;
 
         }
+
+        public string printPartyList_reverse()
+        {
+            string inviteList = "*--";
+            temporary = tail;
+            while (temporary.prev_dog != null)
+            {
+
+
+                inviteList += temporary.dog_name + " * --- * ";
+                temporary = temporary.prev_dog;
+            }
+            inviteList += temporary.dog_name + " *__-";
+            return inviteList;
+
+        }
+
 
     }
 }
