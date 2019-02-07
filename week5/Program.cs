@@ -34,6 +34,7 @@ namespace week5
         {
             myFavouiteVariable++;
             return true;
+
         }
     }
 }
