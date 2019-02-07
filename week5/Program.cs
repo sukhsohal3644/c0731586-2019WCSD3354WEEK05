@@ -37,4 +37,37 @@ namespace week5
 
         }
     }
+
+
+    class dog
+    {
+        private dog(string name, string breed)
+        {
+            dog_name = name;
+            dog_breed = breed;
+
+
+        }
+        public string dog_name ;
+        public string dog_breed;
+        public dog next_dog;
+        public dog previous_dog;
+
+
+    }
+    class birthday_party
+    {
+        
+        public dog fifi;
+        public dog peanut;
+        public dog clarence;
+        public dog roy;
+        public dog tomy;
+        public dog head;
+        public dog tail;
+        public dog temp;
+
+
+    }
+    
 }
